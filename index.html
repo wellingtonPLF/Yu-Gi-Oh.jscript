@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/slide.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body style="background-image: url(imgs/slogan.jpg); background-size: 100% 100%; background-repeat: no-repeat;">
+	<main>
+		<h1 style="margin: 60px 0px 20px 60px;">Make your own Deck</h1>
+		<button style="margin-left:65px;">start</button>
+	</main>
+	<div  id="particles-js" class="none" style="height: 100%; width: 100%; background-color: black; position: absolute; z-index: -10;"></div>
+	<header class="none">
+		<div class="lado">
+			<div class="grid">
+				<button class="header">SAVE</button>
+				<button class = "side"><i class="material-icons">delete</i></button>
+				<div class="bodyup">													<!--Normal Deck-->
+					<img src="imgs/card.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/normal.jpg" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/spell.jpg" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/trap.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/ritual.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+				</div>
+				<div class="body">
+					<table>
+						<tbody id="somecards">
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="extra">														<!--Extra Deck-->
+					<img src="imgs/fusion.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/synchro.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/xyz.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+					<img src="imgs/link.png" style="width: 10px; height: 15px;">
+					<div>0</div>
+				</div> 
+				<div class="extra-cards">
+					<table>
+						<tbody id="somecards">
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="bodydown">
+					<button id="monsters">Monsters</button>
+					<button id="spells">Spells</button>
+					<button id="traps">Traps</button>
+					<button id="sort">Extras</button>
+				</div>
+			</div>
+			<input type="text" name="deck_number" style="margin-left: 10px; border:2px solid firebrick;" placeholder="Deck n°">
+			<div id="allcards">				<!--All Cards-->
+				<table>
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<span>                                                                      <!--Show-->
+			<div id="card"><img style="height: 100%;" src="imgs/back.jpg"></div>
+			<div id="caracter">
+				<div id="name"></div>
+				<div id="stars"></div>
+				<div id="attribute"></div>
+				<div id="type"></div>
+				<div id="description"></div>
+				<div id="A" style="font-size:15px; text-align: center; padding-top: 5px;">&#x2716</div>
+				<div id="power"></div>
+			</div>
+		</span>
+	</header>                                                                    <!--Slide Card-->
+	<footer class="none" style="width: 72vw; position: relative; top: 30px;">
+		<div style="position: relative; left: 15vw;">
+			<div class="dnSlide-main"></div>
+			<div class="dnSlide-main" style="position: relative; top:30px;"></div>
+		</div>																				<!--Deck Name-->
+		<h2 style="position: relative;color: white; left: 30px; bottom: 20px; background-color: blue; width: 120px;"></h2>
+	</footer>																				<!--Whole Script-->
+	<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load("particles-js","particles.json",function(){
+            console.log("particle.json loaded ...")
+        })
+	</script>
+</body>
+</html>

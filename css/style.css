@@ -1,0 +1,314 @@
+body{
+	margin: 0px;
+	height: 100%;
+	min-height: 100vh;
+	background-color: black;
+	overflow-y: hidden;
+}
+
+.none{
+	display: none;
+}
+
+.default{
+	display: default;
+}
+
+button::selection,img::selection,div::selection,i::selection{
+	background-color: none;
+}
+/*..................................................................Init pag...........................................*/
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: 200px;
+	right: 40px;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+}
+h1{
+	font-size: 80px;
+	color: white;
+}
+main button{
+	padding: 10px 55px;
+	font-size: 30px;
+	background: none;
+	color: white;
+}
+/*..................................................................First-Step....................................*/
+header{
+	display: flex;
+	height: 100%;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.lado{
+	margin-top: 50px;
+	margin-right: 50px;
+}
+
+/*...................................................................Normal Deck and Extra Deck......................*/
+
+.grid{
+	margin-bottom: 80px;
+	display: grid;
+	width: 412px;
+	height: 275px;
+	grid-template-columns: 1fr 1fr 30px;
+	grid-template-rows: 30px 15px 130px 15px 65px 40px;
+	grid-gap: 10px;
+	grid-template-areas:
+				 "header header sidebar"
+				 "bodyup bodyup bodyup"
+				 "body body body"
+				 "extra extra extra"
+				 "extra-cards extra-cards extra-cards"
+				 "bodydown bodydown bodydown";
+}
+
+.header{
+	grid-area: header;
+	background-color: #3333FF;
+	border: 1px solid white;
+	margin-top: 2px;
+	color: white;
+}
+
+.side{
+	grid-area:	sidebar;
+	background-color: red;
+	margin-top: 2px;
+	margin-right: 3px;
+	padding: 0px;
+}
+
+.side i{
+	color: white;
+}
+
+.bodyup{
+	grid-area: bodyup;
+	background-color: darkblue;
+	display: flex;
+	color: white;
+}
+
+.body{
+	grid-area: body;
+	background-color: black;
+}
+
+#somecards button, .extra-cards button, #allcards button{
+	border: 1px solid white;
+	color: white;
+	background-color: black;
+	font-size: 12px;
+	width: 37px;
+	height: 57px;
+	text-align: center;
+}
+
+#somecards tr{
+	width: 420px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#somecards tr button{
+	margin: 0.85px;
+}
+
+#somecards tr button:first-child{
+	margin-top: 2px;
+}
+
+#somecards tr td{
+	width: 38.8px;
+	height: 57px;
+	margin-bottom: 3px;
+}
+
+#somecards tr img{
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+
+.extra{
+	grid-area: extra;
+	background-color: darkblue;
+	display: flex;
+	color: white;
+}
+
+.extra-cards{
+	grid-area: extra-cards;
+	background-color: black;
+}
+
+.bodydown{
+	grid-area: bodydown;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.bodydown button{
+	width: 20%;
+	height: 80%;
+}
+
+.body table{
+	width: 100%;
+	height: 100%;
+}
+/*......................................................ALL CARDS................................................*/
+#allcards button{
+	border: none;
+	background-image: url(../imgs/back.jpg);
+	background-size: contain;
+}
+
+#allcards tr{
+	width: 400px;
+	padding-top:10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+#allcards table{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+#allcards{
+	/* background-color: red; */
+	overflow-y: scroll;
+	height: 263px;
+	width: 422px;
+}
+#allcards::-webkit-scrollbar{
+    width: 0px; 
+} 
+/*............................................................Show Card............................................*/
+
+#card{
+	background-color: white;
+	width: 250px;
+	height: 358px;
+	text-align: center;
+}
+
+#card img{
+	width: 250px;
+	height: auto;
+}
+
+#caracter{
+	display: grid;
+	width: 250px;
+	height: 250px;
+	grid-template-columns: 30px 30px 1fr ;
+	grid-template-rows: 30px 30px 30px 1fr 30px;
+	grid-gap: 3px;
+	word-wrap: break-word;
+	color: white;
+}
+
+#name{
+	grid-row: 1/2;
+	grid-column: 1/4;
+	background-color: purple;
+}
+
+#stars{
+	grid-row: 2/3;
+	grid-column: 1/2;
+	background-color: green;
+}
+
+#attribute{
+	grid-row: 2/3;
+	grid-column: 2/4;
+	background-color: blue;
+}
+
+#type{
+	grid-row: 3/4;
+	grid-column: 1/4;
+	background-color: black;
+}
+
+#description{
+	width: 250px;
+	height: 144px;
+	text-align: justify;
+	grid-row: 4/5;
+	grid-column: 1/4;
+	background-color: red;
+	overflow-y: scroll;
+}
+
+#description::-webkit-scrollbar{
+	width: 5px;
+	background-color: maroon;
+}
+
+#A{
+	grid-row: 5/6;
+	grid-column: 1/3;
+	background-color: green;
+	color: white;
+}
+
+#power{
+	grid-row: 5/6;
+	grid-column: 3/4;
+	background-color: orange;
+}
+/*..................................................Click Animation......................................*/
+
+div.clickEffect{
+	position:fixed;
+	box-sizing:border-box;
+	border-style:solid;
+	border-color: gainsboro ;
+	border-radius:50%;
+	animation:clickEffect 0.6s ease-out;
+	z-index:99999;
+}
+@keyframes clickEffect{
+	0%{
+		opacity:1;
+		width:0.5em; height:0.5em;
+		margin:-0.25em;
+		border-width:0.3rem;
+	}
+	100%{
+		opacity:0.2;
+		width:3em; height:3em;
+		margin:-1.5em;
+		border-width:0.03rem;
+	}
+}
+/*................................................................Selection.....................................*/
+
+.sent{
+	display: flex;
+	justify-content: space-around;
+}
+
+.sent button{
+	background-color: black;
+	border: 6px solid white;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	color: white;
+	font-size: 50px;
+}
