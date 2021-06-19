@@ -1,4 +1,4 @@
-# Yu-Gi-Oh.jscript
+# Yu-Gi-Oh.jscript [2018]
 
 Esse projeto foi feito para apresentação de um das materias da universidade (Linguagem de Script), inspirado no game Yu-Gi-Oh Duel links, com o intuito de criar o seu proprio deck através de uma interface via web.
 
