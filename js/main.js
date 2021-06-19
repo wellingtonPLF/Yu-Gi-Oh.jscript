@@ -1,7 +1,8 @@
-const url = 'https://db.ygoprodeck.com/api/v2/cardinfo.php'
+const url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'
 const ur = fetch(url).then(res => res.json()).then(cartas => {
-    return Array.from(cartas[0])
+    return Array.from(cartas.data);
 })
+
 var x = ur.then(r => função(r))
 
 function função(json){

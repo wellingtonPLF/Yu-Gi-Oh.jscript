@@ -4,21 +4,22 @@ Esse projeto foi feito para apresentação de um das materias da universidade (L
 
 Requisitos Minimos:
 
- - Um computador
- - Um mouse ou touchpad
  - IDE Visual Studio Code
+ - HTML Knowledge
  - Live server (package)
  - Java-script Knowledge
 
-Processo de Instalação:
- - git push https://github.com/wellingtonPLF/Yu-Gi-Oh.js.git
+Processo de Download:
+ - git clone https://github.com/wellingtonPLF/Yu-Gi-Oh.js.git
 
 Inspirações:
- - Yu-Gi-Oh Duel Links
+ - Yu-Gi-Oh Duel Links;
 
 Descrição das Funcionalidades:
- - Utilização do poster.js e particle.js para ficar mais apresentavel
- - Criação de um Deck
+ - Fetch da API YU-Gi-Oh;
+ - Eventos de Adição, Exclusão, Edição e Listagem de Cartas;
+ - Utilização do poster.js e particle.js para ficar mais crazy;
+ - Criação do Deck;
 
 Contato:
  - wellplf@gmail.com
